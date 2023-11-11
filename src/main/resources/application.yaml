@@ -4,10 +4,17 @@ spring:
     consumer:
       group-id: my-group-id
   datasource:
-    url:
-      jdbc:
-        postgresql://localhost:5432/demo
+    url: jdbc:postgresql://127.0.0.1:5432/demo
+    driver-class-name: org.postgresql.Driver
     username: postgres
     password: postgres
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        temp:
+
