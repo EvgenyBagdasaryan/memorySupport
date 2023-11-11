@@ -1,0 +1,6 @@
+databaseChangeLog:
+    - include:
+          file: db/changelog/1.0/2020-07-19--0001-authors.sql
+
+    - include:
+          file: db/changelog/data/2020-07-19--0002-authors.sql
