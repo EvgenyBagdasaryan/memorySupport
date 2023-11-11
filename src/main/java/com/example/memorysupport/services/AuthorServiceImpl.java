@@ -17,7 +17,7 @@ public class AuthorServiceImpl implements AuthorService {
     public void saveAuthor(Author author)
     {
         authorRepo.save(author);
-    };
+    }
 
     @Transactional
     @Override
@@ -28,11 +28,11 @@ public class AuthorServiceImpl implements AuthorService {
             resAuthor += item.getId() + " " + item.getName() + " \n ";
 
         return resAuthor;
-    };
+    }
 
     @Transactional
     @Override
     public void deleteById(long id){
         authorRepo.deleteById(id);
-    };
+    }
 }
