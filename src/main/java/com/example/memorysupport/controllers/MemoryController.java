@@ -3,6 +3,7 @@ package com.example.memorysupport.controllers;
 import com.example.memorysupport.domain.Author;
 import com.example.memorysupport.services.AuthorService;
 import com.example.memorysupport.services.KafkaProducerService;
+import com.example.memorysupport.services.UserServiceFeighClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -57,5 +58,14 @@ public class MemoryController {
         Author atr = new Author();
         atr.setName(authorName);
         authorService.saveAuthor(atr);
+    }
+
+    @Autowired
+    private UserServiceFeighClient userServiceFeighClient;
+
+    @GetMapping("/pppinggg")
+    public String UserFeignService(UserServiceFeighClient userServiceFeighClient) {
+        this.userServiceFeighClient = userServiceFeighClient;
+        return userServiceFeighClient.getUserById();
     }
 }

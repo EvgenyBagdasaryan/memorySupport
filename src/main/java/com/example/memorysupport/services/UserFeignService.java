@@ -1,17 +1,18 @@
 package com.example.memorysupport.services;
 
 import org.springframework.stereotype.Service;
+//import com.example.memorysupport.services.UserServiceFeighClient;
 
 @Service
 public class UserFeignService {
 
-    private final UserServiceFeignClient userServiceClient;
+    /*private final UserServiceFeighClient userServiceFeighClient;
 
-    public UserService(UserServiceClient userServiceClient) {
-        this.userServiceClient = userServiceClient;
-    }
+    public UserFeignService(UserServiceFeighClient userServiceFeighClient) {
+        this.userServiceFeighClient = userServiceFeighClient;
+    }*/
 
-    public User getUserById(Long id) {
+    /*public User getUserById(Long id) {
         return userServiceClient.getUserById(id);
     }
 
@@ -25,5 +26,5 @@ public class UserFeignService {
 
     public void deleteUser(Long id) {
         userServiceClient.deleteUser(id);
-    }
+    }*/
 }
